@@ -1,5 +1,5 @@
-!#/bin/bash
-#!/bash/bin
+#!/bin/bash
+
 Person1=$1
 Person2=$2
 echo "$Person1:: Hey Musk, How are you?"
