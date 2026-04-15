@@ -20,7 +20,7 @@ then
 else
    echo "$2 is already installed in the machine"
    exit 1
-
+fi
 }
 
 
