@@ -17,7 +17,14 @@ then
    echo "installing mysql in the machine" 
 
    dnf install mysql -y
+   if [ $? -eq 0 ]
+   then 
+      echo "installing sql is sucessful"
+   else
+      echo "installing sql is failed"
+      exit 1
+   fi
 else
    echo "mysql is already installed in the machine" 
-   exit 1
+   
 fi
