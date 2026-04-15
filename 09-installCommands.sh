@@ -1,13 +1,11 @@
 #!/bin/bash
 
-
-
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-   echo "please run as a root user"
-   exit 1
+   echo "please run as a root user"  
+   
 else 
    echo "logged as admin, please proceed "
 fi
@@ -20,6 +18,5 @@ then
 
    dnf install mysql -y
 else
-   echo "mysql is already installed in the machine"
-   exit 1
+   echo "mysql is already installed in the machine" 
 fi
