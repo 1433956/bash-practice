@@ -28,7 +28,7 @@ then
    echo "installing mysql in the machine" 
 
    dnf install mysql -y
-   VALIDATE $? "$2"
+   VALIDATE $? "mysql"
 else
    echo "mysql is already installed in the machine" 
    
