@@ -21,13 +21,13 @@ else
 fi
 }
 
-dnf list installed mysql 
+dnf list installed $2 
 
 if [ $? -ne 0 ]
 then
    echo "installing mysql in the machine" 
 
-   dnf install mysql -y
+   dnf install $2 -y
    VALIDATE $? "mysql"
 else
    echo "mysql is already installed in the machine" 
