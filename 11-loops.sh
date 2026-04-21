@@ -12,7 +12,7 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-    echo -e "$R please login user as a root user::$USERID $W" $>>$LOG_FILE
+    echo -e "$R please login user as a root user::$USERID $W" $>> tee -a LOG_FILE
     exit 1
 else 
     echo -e "$G loged user as a root user::$USERID $W" | tee -a $LOG_FILE
