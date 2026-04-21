@@ -33,3 +33,5 @@ else
    echo "mysql is already installed in the machine" 
    
 fi
+
+
