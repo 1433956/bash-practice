@@ -10,7 +10,7 @@ Y="\e[33m"
 W="\e[0m"
 USERID=$(id -u)
 
-if [ $? -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo -e "$R please login user as a root user::$USERID $W" $>>$LOG_FILE
     exit 1
