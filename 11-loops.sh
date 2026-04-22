@@ -30,7 +30,7 @@ VALIDATE(){
 }
 
 #check PACKAGES is installed or not   if not install package 
- for package in { [$@] }
+ for package in $@
  do 
    dnf list installed  $package
    if [ $? -eq 0 ]
