@@ -9,7 +9,7 @@ G="\e[32m"
 Y="\e[33m"
 W="\e[0m"
 USERID=$(id -u)
-PACKAGES=("mysql" "nginx" "nodejs")
+#PACKAGES=("mysql" "nginx" "nodejs")
 if [ $USERID -ne 0 ]
 then
     echo -e "$R please login user as a root user::$USERID $W"  &>> $LOG_FILE
@@ -30,7 +30,7 @@ VALIDATE(){
 }
 
 #check PACKAGES is installed or not   if not install package 
- for package in ${PACKAGES[@]}
+ for package in ${PACKAGES[$@]}
  do 
    dnf list installed  $package
    if [ $? -eq 0 ]
